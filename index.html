@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume - Agha Mujeeb</title>
+  <style>
+    /* Overall Body & Wrapper */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #dcdcdc; /* Outer background color */
+    }
+    .wrapper {
+      background-color: whitesmoke;
+      padding: 20px;
+      max-width: 710px;
+      margin: 30px auto;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+    }
+    .container {
+      display: flex;
+      gap: 20px;
+      background: whitesmoke;
+    }
+
+    /* ---------- LEFT COLUMN ---------- */
+    .left {
+      width: 30%;
+      background: #dcdcdc;
+      color: black;
+      padding: 20px;
+      text-align: center;
+      border-radius: 25px;
+    }
+    /* Profile Container (shape + circular image) */
+    .profile-container {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      margin: 20px auto;
+    }
+    .profile-bg-shape {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 165%;
+      height: 155%;
+      background: #2196f3;
+      clip-path: polygon(0 0, 100% 0, 0 100%);
+      transform: translate(-49px, -41px);
+      border-radius: 25px;
+      border-bottom-left-radius:0;
+    }
+    .profile-img {
+      position: relative;
+      z-index: 1;
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      margin: 15px;
+      object-fit: cover;
+      transform: translate(-37px, -39px);
+      
+    }
+
+    /* Heading Section (Name & Job Title) */
+    .heading-section {
+      text-align: center;
+      margin: 10px 0 20px 0;
+      padding: 0 10px;
+    }
+    .heading-section h1 {
+      font-size: 24px;
+      margin: 0;
+      color: #2196f3;
+    }
+    .heading-section .job-title {
+      font-size: 16px;
+      margin: 5px 0 10px 0;
+      color: #555;
+      font-weight: bold;
+    }
+
+    /* About Me Section */
+    .about-me {
+      text-align: left;
+      margin: 10px 0 20px 10px;
+      font-size: 13px;
+      line-height: 1.5;
+      color: #333;
+    }
+    .about-me h3 {
+      margin-left:10px;
+      border-bottom: 2px solid white;
+      padding-bottom: 5px;
+    }
+
+    /* Section Headings for left column */
+    .left .section h3 {
+      border-bottom: 2px solid white;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+      text-align: left;
+      padding-left: 10px;
+    }
+    .left .section {
+      margin-top: 20px;
+    }
+
+    /* Skills (Two-Tone Bars) */
+    .skill {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      padding: 0 10px;
+    }
+    .skill span {
+      font-size: 14px;
+      font-weight: bold;
+      color: #555;
+      margin-right: 10px;
+      flex-shrink: 0;
+      width: 120px;
+      text-align: left;
+    }
+    .skill-bar {
+      flex: 1;
+      display: flex;
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+      background: none;
+    }
+    .skill-level-black {
+      background-color: #333;
+      height: 100%;
+      transition: width 0.4s ease;
+    }
+    .skill-level-gray {
+      background-color: #ddd;
+      height: 100%;
+      transition: width 0.4s ease;
+    }
+
+    /* Contact Section */
+    .contact p {
+      font-size: 14px;
+      text-align: left;
+      margin: 5px 10px;
+      color: #333;
+    }
+
+    /* Reference Section */
+    .reference p {
+      font-size: 14px;
+      text-align: left;
+      margin: 5px 10px;
+      color: #333;
+    }
+    .reference h4 {
+      font-size: 15px;
+      color: #2196f3;
+      margin: 10px 10px 5px;
+      text-align: left;
+    }
+
+    /* ---------- RIGHT COLUMN ---------- */
+    .right {
+      width: 70%;
+      padding: 20px;
+      background-color: lightgray;
+      border-radius: 25px;
+    }
+    .right h3 {
+      color: #2196f3;
+      border-bottom: 2px solid #2196f3;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+    .right .section {
+      margin-bottom: 20px;
+    }
+    .right .section h4 {
+      color: black;
+      margin-bottom: 5px;
+    }
+    .right .section p {
+      font-size: 14px;
+      color: dimgray;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <!-- LEFT COLUMN -->
+      <div class="left">
+        <!-- Profile Container (Shape + Image) -->
+        <div class="profile-container">
+          <div class="profile-bg-shape"></div>
+          <img
+          src="images/profile.jpg"
+          alt="Profile Picture"
+            class="profile-img"
+          />
+        </div>
+        
+        <!-- Heading (Name & Title) -->
+        <div class="heading-section">
+          <h1>Agha Mujeeb</h1>
+          <p class="job-title">Software Engineer</p>
+        </div>
+        
+        <!-- About Me Section -->
+        <div class="about-me">
+          <h3>About Me</h3>
+          <p>
+            Passionate and innovative software engineer with over 7 years of experience in developing cutting-edge applications. I specialize in modern web technologies and artificial intelligence, always seeking to merge creativity with technical excellence.
+          </p>
+        </div>
+        
+        <!-- Skills Section -->
+        <div class="section">
+          <h3>Skills</h3>
+          <div class="skill">
+            <span>COMMUNICATION</span>
+            <div class="skill-bar">
+              <div class="skill-level-black" style="width: 30%;"></div>
+              <div class="skill-level-gray" style="width: 70%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>PROGRAMMING</span>
+            <div class="skill-bar">
+              <div class="skill-level-black" style="width: 80%;"></div>
+              <div class="skill-level-gray" style="width: 20%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>DESIGNING</span>
+            <div class="skill-bar">
+              <div class="skill-level-black" style="width: 60%;"></div>
+              <div class="skill-level-gray" style="width: 40%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>ORGANIZATION</span>
+            <div class="skill-bar">
+              <div class="skill-level-black" style="width: 70%;"></div>
+              <div class="skill-level-gray" style="width: 30%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>LEADERSHIP</span>
+            <div class="skill-bar">
+              <div class="skill-level-black" style="width: 50%;"></div>
+              <div class="skill-level-gray" style="width: 50%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>TEAMPLAYER</span>
+            <div class="skill-bar">
+              <div class="skill-level-black" style="width: 90%;"></div>
+              <div class="skill-level-gray" style="width: 10%;"></div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Contact Section -->
+        <div class="section contact">
+          <h3>Contact</h3>
+          <p>Address: 123 Tech Avenue, Karachi, Pakistan</p>
+          <p>Phone: +92 300 1234567</p>
+          <p>Email: aghamujeeb34@example.com</p>
+        </div>
+        
+        <!-- Reference Section -->
+        <div class="section reference">
+          <h3>Reference</h3>
+          <h4>Mr. John Doe</h4>
+          <p>Senior Manager, Tech Innovators Inc.</p>
+          <p>Email: john.doe@techinnovators.com</p>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="right">
+        <h3>Work Experience</h3>
+        <div class="section">
+          <h4>Software Engineer - Tech Innovators Inc.</h4>
+          <p>
+            Led a team in designing and implementing scalable web applications for various clients. 
+            Improved system efficiency and reduced load times by 30% through optimized code and modern frameworks.
+          </p>
+        </div>
+        <div class="section">
+          <h4>Senior Software Engineer - NextGen Solutions</h4>
+          <p>
+            Spearheaded the development of AI-driven solutions to enhance customer engagement.
+            Collaborated with cross-functional teams to deliver projects on time and within budget.
+          </p>
+        </div>
+        
+  <!-- Education Section in the RIGHT COLUMN -->
+<h3>Education</h3>
+<div class="section">
+  <h4>High School Diploma</h4>
+  <p>
+    The Educators Shikarpur Campus, 2016 – 2020<br>
+    Achieved excellent academic performance with a strong emphasis on science and mathematics. Actively involved in extracurricular activities and sports.
+  </p>
+</div>
+<div class="section">
+  <h4>Intermediate College</h4>
+  <p>
+    The Educators Shikarpur Campus, 2020 – 2022<br>
+    Completed intermediate studies with a concentration in pre-engineering subjects. Engaged in debate clubs and community service projects.
+  </p>
+</div>
+<div class="section">
+  <h4>Bachelor of Science in Software Engineering (In Progress)</h4>
+  <p>
+    XYZ University, 2022 – Present<br>
+    Pursuing a Bachelor's degree in Software Engineering with a focus on modern web technologies, software design, and emerging innovations. Expected graduation: 2026.
+  </p>
+</div>
+
+
+        
+        <h3>Hobbies</h3>
+        <div class="section">
+          <p>🏏 Cricket &nbsp; 🎮 Gaming &nbsp; 📸 Photography &nbsp; ✈️ Traveling</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
